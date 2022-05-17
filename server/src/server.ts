@@ -1,10 +1,11 @@
 import express from 'express'
 import {controller} from "./controller";
+import cors from 'cors'
 
 // Inicializa a aplicação
 const app = express()
 
-// Manda o Express entender JSON
+app.use(cors())
 app.use(express.json())
 app.use(controller)
 
